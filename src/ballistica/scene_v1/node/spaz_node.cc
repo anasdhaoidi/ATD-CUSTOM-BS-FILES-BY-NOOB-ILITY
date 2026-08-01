@@ -5304,7 +5304,7 @@ void SpazNode::Draw(base::FrameDef* frame_def) {
       }
     }
     c.SetLightShadow(base::LightShadowType::kObject);
-    c.SetTexture(g_base->assets->SysTexture(base::SysTextureID::kBoxingGlove));
+    c.SetTexture(g_base->assets->SysTexture(base::SysTextureID::kTexturesOuyaAbutton));
 
     {
       auto xf = c.ScopedTransform();
