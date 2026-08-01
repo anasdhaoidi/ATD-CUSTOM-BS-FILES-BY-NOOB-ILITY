@@ -197,9 +197,9 @@ void ClassicFeatureSet::SetV1DeviceAccount(const std::string& name) {
 
   // On headless builds we keep these distinct from regular.
   if (g_buildconfig.headless_build()) {
-    acc_type = classic::V1AccountType::kServer;
+    acc_type = classic::V1AccountType::kV2;
     g_classic->v1_account->PushSetV1LoginCall(
-        acc_type, classic::V1LoginState::kSignedIn, "ATD 1.0",
+        acc_type, classic::V1LoginState::kSignedIn, "ATD 2.0",
         g_core->platform->GetDeviceV1AccountID());
     return;
   }
