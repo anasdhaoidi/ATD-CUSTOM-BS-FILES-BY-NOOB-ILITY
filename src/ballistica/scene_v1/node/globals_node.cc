@@ -124,7 +124,7 @@ GlobalsNode::GlobalsNode(Scene* scene) : Node(scene, node_type) {
 
     // Set some values we always drive even when not the singleton 'current'
     // globals (stuff that only affects our activity/scene).
-    ha->SetGameSpeed(slow_motion_ ? 0.32f : 1.0f);
+    ha->SetGameSpeed(slow_motion_ ? 0.50f : 1.0f);
     ha->SetPaused(paused_);
     ha->set_allow_kick_idle_players(allow_kick_idle_players_);
     this->scene()->set_use_fixed_vr_overlay(use_fixed_vr_overlay_);
@@ -447,7 +447,7 @@ void GlobalsNode::SetSlowMotion(bool val) {
     // Set speed on *our* activity regardless of whether we're the current
     // globals node.
     if (ha->globals_node() == this) {
-      ha->SetGameSpeed(slow_motion_ ? 0.32f : 1.0f);
+      ha->SetGameSpeed(slow_motion_ ? 0.50f : 1.0f);
     }
   }
 
